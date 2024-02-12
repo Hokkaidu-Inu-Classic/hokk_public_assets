@@ -1,0 +1,246 @@
+% hokk_v1_0.tex --- HOKKPAPER v1.0
+\documentclass{article}
+
+% load packages
+\usepackage{fancyhdr} % headers
+\usepackage{xpatch} % patch header
+\usepackage{geometry} % margins
+\geometry{margin=1in}
+\usepackage{graphicx} % images
+\graphicspath{ {./img/} }
+\usepackage{hyperref} % links
+\usepackage[most]{tcolorbox} % fancy colorboxes
+\usepackage{xcolor} % html color codes
+\usepackage{enumitem} % more control over lists
+
+% document settings
+%% set up custom colors
+\definecolor{salmon1}{HTML}{e59f7c}
+\definecolor{salmon2}{HTML}{e0836a}
+\definecolor{gray1}{HTML}{c4c4c4}
+\definecolor{pink1}{HTML}{ea3f91}
+
+%% link formatting
+\hypersetup{
+  colorlinks=true,
+  linkcolor=salmon2,
+  urlcolor=pink1
+}
+
+%% list formatting
+\setlist{nosep}
+
+%% TOC with no numbers in section headings
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+% title page: more formatting for body below...
+\pagestyle{fancy}
+\thispagestyle{empty}
+\fancyhead{} % clear header
+\fancyfoot{} % clear footer
+
+\begin{center}
+  \huge
+  \colorbox{pink1}{\textbf{HOKKPAPER}}
+\end{center}
+
+\vspace{30mm}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{big-logo}
+\end{figure}
+
+\vspace{30mm}
+\begin{center}
+  \large
+  The Hokkaidu Inu Whitepaper
+\end{center}
+
+\clearpage
+
+% set up the headers and footers
+\xpretocmd\headrule{\color{pink1}}{}{\PatchFailed}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{\textbf{HOKK CLASSIC}}
+\fancyhead[R]{v1.0}
+\fancyfoot[C]{\textit{The Legend Will Rise Again}}
+\fancyfoot[L]{February 11, 2024}
+\fancyfoot[R]{\thepage}
+
+% make this page 1
+\setcounter{page}{1}
+
+% body starts here
+\section{Introduction}
+Hokkaidu Inu, the rival of Shiba Inu, is staging a comeback with a clear mission: To reclaim its old glory in the eternal battle against Shiba Inu. This whitepaper introduces Hokkaidu Inu's community revival as HOKK Classic and its return to its roots as a playful and community-centric memecoin. Join us in reigniting the spirited rivalry of Inus, and recapture the excitement and camaraderie that once defined the HOKK vs. SHIB saga.
+
+\section{Vision Statement}
+Our vision for HOKK Classic is to reignite the former glory of Hokkaidu Inu and to reclaim its position in the forefront of the memecoin space, renewing its legendary rivalry with Shiba Inu. Inspired by the success both coins achieved in 2021, we strive to not only revive Hokkaidu Inu, but to elevate it to new heights.
+
+We envision a community-driven resurgence that fosters innovation, transparency, and resilience. By leveraging the strength of our community and drawing inspiration from the historical achievements of Hokkaidu Inu, we aim to create an environment where the token not only thrives but also becomes a symbol of the enduring spirit of meme tokens.
+
+\section{Naming}
+The official name of our token is \textbf{Hokkaidu Inu}, ticker \textbf{HOKK}. However, to highlight our past and to distinguish ourselves from other tokens with similar names, we have adopted the name \textbf{HOKK Classic} for our community revival project. Our mascot is the \textbf{Hokkaido Inu} dog. Our contract address and Uniswap pair information are given below:
+
+\bigskip
+{\raggedleft Contract Address: \href{https://etherscan.io/token/0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e}{0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e}}
+
+\smallskip
+{\raggedleft Uniswap: \href{https://v2.info.uniswap.org/pair/0x9314941c11d6dee1d7bf93113eb74d4718949f3b}{ETH/HOKK}}
+
+\vfill
+\tableofcontents
+
+\newpage
+\section{History}
+The story of HOKK is a remarkable journey through the volatile landscape of cryptocurrency, marked by a meteoric rise, significant challenges, and a motivated push for revival. We aim to provide a foundational understanding of HOKK's trajectory for those unfamiliar with its history and a motivation for its revival.
+
+\subsection{Rise}
+In 2021, the cryptocurrency market witnessed an unprecedented surge in the popularity of meme-based digital assets, particularly those with inspirations or themes related to dogs. Hokkaidu Inu (HOKK) and Shiba Inu (SHIB) were the two biggest of these and emerged as the most prominent meme-based coins. At its peak, HOKK had a total market capitalization of over \$800 million and was on track to reach the status of SHIB that we see today. During this period, HOKK and SHIB were neck-and-neck, and at one point HOKK even surpassed SHIB in market cap. During the 2021 bull market, HOKK established itself as a significant player not only among memecoins but also within the wider crypto space.
+
+\subsection{Fall}
+The developers behind many of the dog-themed tokens, including HOKK and SHIB, adopted a strategy of sending half of their token supply to the founder of Ethereum, Vitalik Buterin. This was meant as a way to gain publicity and credibility, with the hope that VB would permanently remove the tokens he received from circulation. However, this tactic backfired when VB, disapproving of the speculative direction these tokens were taking, instead decided to sell his holdings and donate the proceeds to charity. This had a profound effect on the market, especially for HOKK. The Shiba Inu whitepaper quotes its founder as saying, \textit{``We sent over 50\% of the TOTAL supply to Vitalik... as long as VB doesn't rug us, then SHIBA will grow and survive.''} SHIB ultimately managed to recover due to VB's decision to only sell 10\% of his tokens and burn the rest, gaining him the title of ``Vitalik Buterin, Friend of SHIB.'' \footnote{\href{http://web.archive.org/web/20230325143227/https://shibatoken.com/assets/files/SHIBA_INU_WOOF_PAPER_V1-be8dfc380016e7dd95276ca12efb07bb.pdf}{Shiba Inu Woof Paper v1}} While VB may have been a friend to SHIB, he was the downfall of HOKK. The HOKK developers \href{https://etherscan.io/tx/0x402a19a27edb828deed9c6e5dfcd3f755fe9a6f5de7e0003258fe5a474168cfd}{locked 88\%} of the total supply as liquidity on Uniswap, \href{https://etherscan.io/tx/0x7e564274825e0e48cd4dcef21312d56a98471e9b84861c0180489bf54d693137}{burned half} of the liquidity, and \href{https://etherscan.io/tx/0x75bfa9f7cf1b17b486c936ef0d172d03667e037986682b36beb7fef07f043b86}{sent the rest} to VB. However, he chose to \href{https://etherscan.io/tx/0x0534c7764e7461c15b2b589144237ce5572a618d9cafb4c397b1ee3fe64411ac}{sell} everything, sinking HOKK's market cap and demoralizing its supporters. The community and developers voted to migrate to a new and more promising project, Hokk.Finance. As SHIB crossed \$30 billion, HOKK gradually fell into obscurity, alone and unloved.
+
+\subsection{Revival}
+Against the backdrop of these challenges, the story of HOKK took a hopeful turn in late January 2024. Since the original HOKK contract was renounced, no one had control of the token, development had stopped, and no community remained. Although the market cap had fallen to around \$40,000, a group of enthusiastic individuals, bonded by their appreciation for HOKK's past achievements, set out on a quest to restore the token's previous prominence. This group of volunteers began to work towards reviving the token with the goal of bringing back its former glory from 2021. Without any formal organization, external backers, or funding beyond community donations, we developed a refreshed website, revitalized HOKK's community across social media and messaging platforms, and started the difficult task of updating various crypto tracking tools such as CoinGecko, CoinMarketCap, and DEXTools.
+
+These concentrated efforts yielded tangible results in an impressively short time frame. In our first week, we brought the market cap from \$40,000 to \$2,000,000, grew to over 100 members, and raised over \$600 in community funds. This turnaround is a testament to the community's dedication and the latent potential for recovery inherent in the crypto market. Our ambition extends beyond merely reaching the previous \$800 million market cap; it encompasses a vision for achieving new milestones through persistent effort and community engagement.
+
+\bigskip
+{\raggedleft \textbf{The future of HOKK is being written now. Will you join us?}}
+
+\newpage
+\section{Values}
+\subsection{Community}
+We believe in bringing the fun back to the memecoin space. Our community is not just about empty promises of complex technologies; it's about embracing the spirit of meme magic and enjoying the exhilarating ride together. We understand that, at its core, the memecoin space is about laughter, excitement, and the shared joy of being part of something unique.
+
+Our community thrives on the collective enthusiasm of individuals who appreciate the lighter side of crypto. We leave behind the jargon-filled promises of complicated technologies and instead focus on the pure joy that comes from the unpredictability and playfulness of memecoins. Our commitment is to create an environment where every member finds delight in the journey, and where the thrill of the ride is as important as the destination.
+
+We have over 68,000 holders with no wallet holding over 2\% of the total supply. As a community-focused project, we are entirely funded by community donations: There is no team wallet, dev wallet, or token reserve. HOKK has a 2\% buy tax and 1.77\% sale tax to reward our community members for holding the token. All tax is converted into reflections for current holders.
+
+\subsection{Inclusivity}
+For us, inclusivity is not just a concept --- it is a commitment. We encourage open dialogue in our socials, respectful communication, and an effort to understand each other. All of our funding comes through a public community wallet, and funds are directed according to community feedback. Since our contract is revoked and no single user holds a majority of the tokens, we are truly equals in our effort to revive HOKK.
+
+\subsection{Interconnectivity}
+We want to meet new people, make memes about Hokkaido Inus, and spread happiness. Simply put, HOKK Classic is a project that connects people together through the power of memecoins!
+
+\bigskip
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=salmon1!10!white,colframe=pink1,colbacktitle=pink1,
+  title=Community Links,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=pink1} ]
+  \begin{itemize}
+  \item Community Wallet: \href{https://etherscan.io/address/0x6bb28246454814C57EE15208B7a275ABcbeF58d3}{Etherscan}
+  \item Website: \href{https://hokkaiduinu.com/}{hokkaiduinu.com}
+  \item Telegram: \href{https://t.me/HokkaiduInuOfficial}{Hokkaidu Inu - Portal}
+  \item Discord: \href{https://discord.gg/tY2JsTXP}{HOKK Classic Server}
+  \item Twitter: \href{https://twitter.com/HokkaInuEth}{HokkaInuEth}
+  \item Medium: \href{https://medium.com/@HokkInuETH}{@HokkInuETH}
+  \item Reddit: \href{https://reddit.com/r/HOKKHORDE}{/r/HOKKHORDE}
+  \item Instagram: \href{https://www.instagram.com/hokkclassicofficial/}{@hokkclassicofficial}
+  \end{itemize}
+\end{tcolorbox}
+
+\newpage
+\section{Tokenomics}
+Contract Address: \href{https://etherscan.io/token/0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e}{0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e}
+
+\smallskip
+{\raggedleft Uniswap: \href{https://v2.info.uniswap.org/pair/0x9314941c11d6dee1d7bf93113eb74d4718949f3b}{ETH/HOKK}}
+
+\bigskip
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=salmon1!10!white,colframe=pink1,colbacktitle=pink1,
+  title=Fast Facts,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=pink1} ]
+  \begin{itemize}
+  \item Total Supply: 100 Quadrillion
+  \item Circulating Supply: 97.1 Quadrillion (0.85\% burnt)
+  \item 68,000+ holders
+  \item Reflections (2\% buy tax / 1.77 \% sell tax)
+  \item Contract Renounced
+  \item No Team Wallet
+  \item Liquidity Burned
+  \item Decentralized
+  \item Deflationary
+  \item Audited by \href{https://github.com/TechRate/Smart-Contract-Audits/blob/main/2018-21%20A-M/Hokkaidu%20Inu.pdf}{TechRate}
+\end{itemize}
+\end{tcolorbox}
+
+As a community-led coin, we have a \href{https://etherscan.io/tx/0x06ca2f1e4203da09f8ac48351c726af638fa018b9078f24878fc5838ce9c01c4}{renounced contract}, no token reserve, no team wallet, and no whales. We have a 100/100 score on \href{https://tokensniffer.com/token/eth/b4sx59z86ppaszdabzp9xp1bafkdj9ljqhf2bi2mgvjc0q0o2n4a4es0kbsa}{Token Sniffer} and have been audited by \href{https://github.com/TechRate/Smart-Contract-Audits/blob/main/2018-21%20A-M/Hokkaidu%20Inu.pdf}{TechRate}. There is a 2\% buy tax and 1.77\% sell tax to reward holders. Initially, 88\% of the total supply was locked as liquidity and half of the liquidity tokens were \href{https://etherscan.io/tx/0x7e564274825e0e48cd4dcef21312d56a98471e9b84861c0180489bf54d693137}{burned}. As of February 11, 2024, 12.35\% of the total supply of HOKK is locked as \href{https://etherscan.io/address/0x9314941c11d6dee1d7bf93113eb74d4718949f3b}{liquidity on Uniswap} and 0.85\% of the total supply has been burned and sent to \href{https://etherscan.io/address/0x000000000000000000000000000000000000dead}{0xdead}. Because the burn wallet also gets reflections, HOKK is deflationary.
+
+\newpage
+\section{Roadmap}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=pink1,
+  title=Phase 1: Revive the Legend (\textit{Complete}),
+  fonttitle=\bfseries]
+  \begin{itemize}
+  \item New Website
+  \item New Socials
+  \item Telegram Channel
+  \item Community Wallet
+  \end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=pink1,
+  title=Phase 2: Search the Past (\textit{Complete}),
+  fonttitle=\bfseries]
+  \begin{itemize}
+  \item Find Smart Contract Audit
+  \item Collect Hokkaidu Inu Lore
+  \end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=salmon2,
+  title=Phase 3: Build Momentum (\textit{In Progess}),
+  fonttitle=\bfseries]
+  Update or add information to:
+  \begin{itemize}
+  \item Birdeye
+  \item CoinGecko
+  \item CoinMarketCap
+  \item DEX Screener
+  \item DEXTools
+  \item Trust Wallet
+  \item Uniswap
+  \end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=salmon1,
+  title=Phase 4: Gather Forces,
+  fonttitle=\bfseries]
+  Many CEXs still hold HOKK. Contact them and make an offer that they can't refuse.
+  \begin{itemize}
+  \item Bilaxy
+  \item Bitrue
+  \item Coinbase
+  \item Hotbit 2.0
+  \item LBank
+  \item OKX
+  \item WhiteBIT
+  \end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=salmon1,
+  title=Phase 5: The King is Back,
+  fonttitle=\bfseries]
+  Fund an animation to tell our origin story.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=salmon1!10!white,colframe=salmon1,
+  title=Phase 6: Defeat Shiba Inu,
+  fonttitle=\bfseries]
+  \begin{itemize}
+  \item Get listed on Binance
+  \item Get a personal apology letter from Vitalik Buterin for selling HOKK in 2021
+  \end{itemize}
+\end{tcolorbox}
+
+\newpage
+\section{Disclaimer}
+This document serves as a whitepaper for the meme token \textbf{Hokkaidu Inu} (ticker: \textbf{HOKK}) and our our community revival project \textbf{HOKK Classic}. The contract address for Hokkaidu Inu is:
+
+\href{https://etherscan.io/token/0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e}{0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e} (Etherscan)
+
+It is crucial to understand that HOKK Classic is a community takeover project, and it is entirely unrelated to the second version of the similarly-named Hokkaido Inu contract, \textbf{Hokk.Finance}. The Hokkaidu Inu contract has been revoked, and the two projects should be considered as completely separate entities. Any information pertaining to Hokk.Finance is not applicable to Hokkaidu Inu and vice versa.
+
+The content of this whitepaper is provided for informational purposes only and should not be considered as financial advice or an endorsement of the token. It is your responsibility to do your own research and to check the veracity of any information, discussion, or links contained in this document. Unless otherwise marked, information is current as of February 11, 2024.
+\end{document}
