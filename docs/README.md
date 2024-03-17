@@ -3,7 +3,7 @@ Welcome to the HOKK Classic Public Assets Repository. We are a community-led rev
 
 ## Hokkpaper
 Here is the latest version of the Hokkpaper, our whitepaper:
-[Hokkpaper V1.0](https://github.com/Hokkaidu-Inu-Classic/hokk_public_assets/tree/main/whitepaper/hokk_v1_0.pdf)
+[Hokkpaper V1.2](https://github.com/Hokkaidu-Inu-Classic/hokk_public_assets/tree/main/whitepaper/hokk_v1_2.pdf)
 
 ## Audit
 Our contract has been renounced. It was audited by Tech Rate. Here is our local copy of the audit:
